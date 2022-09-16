@@ -1,0 +1,125 @@
+module.exports = [
+  {
+    title: '基础',
+    collapsable: false,
+    children: [
+      './01-基础/day01.md',
+      './01-基础/day02.md',
+      './01-基础/day03.md',
+      './01-基础/day04.md',
+    ],
+  },
+  {
+    title: '好租客',
+    collapsable: false,
+    children: [
+      './02-好租客/react好租客项目Day01-项目演示&项目搭建&antd-mobile的TabBar使用.md',
+      './02-好租客/react好租客项目Day02.md',
+      './02-好租客/react好租客项目Day03-城市选择功能&react-virtualized组件使用.md',
+      './02-好租客/react好租客项目Day04-城市列表索引列相关功能&封装NavHeader&CSS IN JS.md',
+      './02-好租客/react好租客项目Day05-根据定位展示对应城市&地图找房模块封装&loading美化.md',
+      './02-好租客/react好租客项目Day06.md',
+      './02-好租客/react好租客项目Day07-条件筛选功能实现&FilterTitle组件功能实现&房屋列表数据获取.md',
+      './02-好租客/react好租客项目Day08-房屋列表滚动&加载更多&吸顶功能&bug定位&react-spring.md',
+      './02-好租客/react好租客项目Day09-房屋详情&路由配置&登录功能&formik表单校验.md',
+      './02-好租客/react好租客项目Day10-检测是否登&退出&axios拦截器&鉴权路由&收藏模块.md',
+      './02-好租客/react好租客项目Day11-发布房源模块.md',
+    ],
+  },
+  {
+    title: '01-react基础',
+    collapsable: false,
+    children: [
+      './03-heima-react-doc/01-react基础/01-React入门.md',
+      './03-heima-react-doc/01-react基础/02-组件基础.md',
+      './03-heima-react-doc/01-react基础/03- 组件通讯-概念.md',
+      './03-heima-react-doc/01-react基础/04-组件生命周期.md',
+      './03-heima-react-doc/01-react基础/05-react原理揭秘.md',
+      './03-heima-react-doc/01-react基础/06-react路由.md',
+    ],
+  },
+  {
+    title: '02-react-极客园pc',
+    collapsable: false,
+    children: [
+      './03-heima-react-doc/02-react-极客园pc/01-项目搭建.md',
+      './03-heima-react-doc/02-react-极客园pc/02-登录功能.md',
+      './03-heima-react-doc/02-react-极客园pc/03-首页.md',
+      './03-heima-react-doc/02-react-极客园pc/04-文章列表.md',
+    ],
+  },
+  {
+    title: '03-react-hooks',
+    collapsable: false,
+    children: [
+      './03-heima-react-doc/03-react-hooks/01-hooks基本使用.md',
+      './03-heima-react-doc/03-react-hooks/02-hooks进阶.md',
+    ],
+  },
+  {
+    title: '04-react-redux',
+    collapsable: false,
+    children: [
+      './03-heima-react-doc/04-react-redux/redux-基础.md',
+      './03-heima-react-doc/04-react-redux/redux-进阶（中间件）.md',
+    ],
+  },
+  {
+    title: '05-typescript',
+    collapsable: false,
+    children: [
+      './03-heima-react-doc/05-typescript/typescript笔记/01-TypeScript 介绍.md',
+      './03-heima-react-doc/05-typescript/typescript笔记/02-TypeScript 常用类型.md',
+      './03-heima-react-doc/05-typescript/typescript笔记/03-TypeScript 高级类型.md',
+      './03-heima-react-doc/05-typescript/typescript笔记/04-TS项目初始化与类型声明文件.md',
+      './03-heima-react-doc/05-typescript/typescript笔记/05-React与Typescript.md',
+    ],
+  },
+  {
+    title: '06-react-极客园',
+    collapsable: false,
+    children: [
+      './03-heima-react-doc/06-react-极客园/01-项目准备.md',
+      './03-heima-react-doc/06-react-极客园/02-登录模块.md',
+      './03-heima-react-doc/06-react-极客园/03-布局页面.md',
+      './03-heima-react-doc/06-react-极客园/04-个人中心.md',
+      './03-heima-react-doc/06-react-极客园/05-小智同学.md',
+      './03-heima-react-doc/06-react-极客园/06-首页.md',
+      './03-heima-react-doc/06-react-极客园/07-搜索功能.md',
+      './03-heima-react-doc/06-react-极客园/08-文章详情.md',
+    ],
+  },
+  {
+    title: '07-react原理揭秘',
+    collapsable: false,
+    children: [
+      './03-heima-react-doc/07-react原理揭秘/01-react-组件复用.md',
+      './03-heima-react-doc/07-react原理揭秘/02-setState.md',
+      './03-heima-react-doc/07-react原理揭秘/03-hooks进阶.md',
+      './03-heima-react-doc/07-react原理揭秘/04-就业加强.md',
+      './03-heima-react-doc/07-react原理揭秘/05-就业加强.md',
+      './03-heima-react-doc/07-react原理揭秘/项目.md',
+    ],
+  },
+  {
+    title: '黑马React基础-2022',
+    collapsable: false,
+    children: [
+      './04-react-basic-2022/01-React 基础.md',
+      './04-react-basic-2022/02-组件基础.md',
+      './04-react-basic-2022/03-组件通讯.md',
+      './04-react-basic-2022/04-组件生命周期.md',
+      './04-react-basic-2022/05-react原理揭秘.md',
+      './04-react-basic-2022/06-react路由.md',
+    ],
+  },
+  {
+    title: '黑马React-hooks-2022',
+    collapsable: false,
+    children: [
+      './04-react-basic-2022/hooks/01-react-组件复用.md',
+      './04-react-basic-2022/hooks/02-hooks基本使用.md',
+      './04-react-basic-2022/hooks/03-hooks进阶.md',
+    ],
+  },
+]

@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>移动端WEB开发之响应式布局 | 程序猿小萨</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/my-blog/img/favicon.ico">
+    <link rel="icon" href="/my-blog/logo.jpg">
+    <link rel="stylesheet" href="/my-blog/css/style.css">
+    <link rel="stylesheet" href="/my-blog/styles/style.css">
+    <meta name="description" content="学的不仅是技术，更是梦想">
+    
+    <link rel="preload" href="/my-blog/assets/css/0.styles.ecc0b0a4.css" as="style"><link rel="preload" href="/my-blog/assets/js/app.7c428a71.js" as="script"><link rel="preload" href="/my-blog/assets/js/3.bb9bf636.js" as="script"><link rel="preload" href="/my-blog/assets/js/91.d778883e.js" as="script"><link rel="prefetch" href="/my-blog/assets/js/10.4db2ee45.js"><link rel="prefetch" href="/my-blog/assets/js/100.2fffb30e.js"><link rel="prefetch" href="/my-blog/assets/js/101.07c4c005.js"><link rel="prefetch" href="/my-blog/assets/js/102.a4f5f2ab.js"><link rel="prefetch" href="/my-blog/assets/js/103.04dc7d20.js"><link rel="prefetch" href="/my-blog/assets/js/104.db19c071.js"><link rel="prefetch" href="/my-blog/assets/js/105.c5076a7d.js"><link rel="prefetch" href="/my-blog/assets/js/106.016b2a8e.js"><link rel="prefetch" href="/my-blog/assets/js/107.69361372.js"><link rel="prefetch" href="/my-blog/assets/js/108.6b873487.js"><link rel="prefetch" href="/my-blog/assets/js/109.dcef6f03.js"><link rel="prefetch" href="/my-blog/assets/js/11.8e0ecf79.js"><link rel="prefetch" href="/my-blog/assets/js/110.c075c081.js"><link rel="prefetch" href="/my-blog/assets/js/111.5ceacc7b.js"><link rel="prefetch" href="/my-blog/assets/js/112.806029be.js"><link rel="prefetch" href="/my-blog/assets/js/113.09282625.js"><link rel="prefetch" href="/my-blog/assets/js/114.cc121a77.js"><link rel="prefetch" href="/my-blog/assets/js/115.b65535b0.js"><link rel="prefetch" href="/my-blog/assets/js/116.1c60e297.js"><link rel="prefetch" href="/my-blog/assets/js/117.76c88f9c.js"><link rel="prefetch" href="/my-blog/assets/js/118.489369fd.js"><link rel="prefetch" href="/my-blog/assets/js/119.57ce1dd4.js"><link rel="prefetch" href="/my-blog/assets/js/12.59bafcb5.js"><link rel="prefetch" href="/my-blog/assets/js/120.eb88579c.js"><link rel="prefetch" href="/my-blog/assets/js/121.df569222.js"><link rel="prefetch" href="/my-blog/assets/js/122.8fe90413.js"><link rel="prefetch" href="/my-blog/assets/js/123.e95c7eb0.js"><link rel="prefetch" href="/my-blog/assets/js/124.142e1289.js"><link rel="prefetch" href="/my-blog/assets/js/125.ec039450.js"><link rel="prefetch" href="/my-blog/assets/js/126.ebbdc164.js"><link rel="prefetch" href="/my-blog/assets/js/127.9668af23.js"><link rel="prefetch" href="/my-blog/assets/js/128.c84d1e01.js"><link rel="prefetch" href="/my-blog/assets/js/129.1ccbf3a8.js"><link rel="prefetch" href="/my-blog/assets/js/13.51370618.js"><link rel="prefetch" href="/my-blog/assets/js/130.d37460df.js"><link rel="prefetch" href="/my-blog/assets/js/131.252accbf.js"><link rel="prefetch" href="/my-blog/assets/js/132.f8871372.js"><link rel="prefetch" href="/my-blog/assets/js/133.f076c159.js"><link rel="prefetch" href="/my-blog/assets/js/134.938aafc4.js"><link rel="prefetch" href="/my-blog/assets/js/135.98d31db1.js"><link rel="prefetch" href="/my-blog/assets/js/136.436cd1b2.js"><link rel="prefetch" href="/my-blog/assets/js/137.bcf9e8e3.js"><link rel="prefetch" href="/my-blog/assets/js/138.931f7d6b.js"><link rel="prefetch" href="/my-blog/assets/js/139.60f9454a.js"><link rel="prefetch" href="/my-blog/assets/js/14.4932591f.js"><link rel="prefetch" href="/my-blog/assets/js/140.0598b3ce.js"><link rel="prefetch" href="/my-blog/assets/js/141.24477031.js"><link rel="prefetch" href="/my-blog/assets/js/142.10be2079.js"><link rel="prefetch" href="/my-blog/assets/js/143.23926a00.js"><link rel="prefetch" href="/my-blog/assets/js/144.cffffaeb.js"><link rel="prefetch" href="/my-blog/assets/js/145.4fe5c915.js"><link rel="prefetch" href="/my-blog/assets/js/146.71845fac.js"><link rel="prefetch" href="/my-blog/assets/js/147.40c724c6.js"><link rel="prefetch" href="/my-blog/assets/js/148.d839c855.js"><link rel="prefetch" href="/my-blog/assets/js/149.f47967d5.js"><link rel="prefetch" href="/my-blog/assets/js/15.8ef5c91f.js"><link rel="prefetch" href="/my-blog/assets/js/150.a890b37c.js"><link rel="prefetch" href="/my-blog/assets/js/151.9db60f3a.js"><link rel="prefetch" href="/my-blog/assets/js/152.3f907e4b.js"><link rel="prefetch" href="/my-blog/assets/js/153.4433e611.js"><link rel="prefetch" href="/my-blog/assets/js/154.13ffa368.js"><link rel="prefetch" href="/my-blog/assets/js/155.192cb54f.js"><link rel="prefetch" href="/my-blog/assets/js/156.ba129467.js"><link rel="prefetch" href="/my-blog/assets/js/157.35b396b5.js"><link rel="prefetch" href="/my-blog/assets/js/158.942acf61.js"><link rel="prefetch" href="/my-blog/assets/js/159.7b355eba.js"><link rel="prefetch" href="/my-blog/assets/js/16.17b3c170.js"><link rel="prefetch" href="/my-blog/assets/js/160.eda036e7.js"><link rel="prefetch" href="/my-blog/assets/js/161.2f2ec8cb.js"><link rel="prefetch" href="/my-blog/assets/js/162.dd99b22d.js"><link rel="prefetch" href="/my-blog/assets/js/163.55e1aec2.js"><link rel="prefetch" href="/my-blog/assets/js/164.29b45d76.js"><link rel="prefetch" href="/my-blog/assets/js/165.d47db04a.js"><link rel="prefetch" href="/my-blog/assets/js/166.eff613ae.js"><link rel="prefetch" href="/my-blog/assets/js/167.a9f08670.js"><link rel="prefetch" href="/my-blog/assets/js/168.f458a27f.js"><link rel="prefetch" href="/my-blog/assets/js/169.ec40acdd.js"><link rel="prefetch" href="/my-blog/assets/js/17.24ff5731.js"><link rel="prefetch" href="/my-blog/assets/js/170.9e988a8d.js"><link rel="prefetch" href="/my-blog/assets/js/171.59329201.js"><link rel="prefetch" href="/my-blog/assets/js/172.8e6df937.js"><link rel="prefetch" href="/my-blog/assets/js/173.a6f00b7a.js"><link rel="prefetch" href="/my-blog/assets/js/174.1dd5efe8.js"><link rel="prefetch" href="/my-blog/assets/js/175.90da8e24.js"><link rel="prefetch" href="/my-blog/assets/js/176.141d880d.js"><link rel="prefetch" href="/my-blog/assets/js/177.079b5b05.js"><link rel="prefetch" href="/my-blog/assets/js/178.ebd59b63.js"><link rel="prefetch" href="/my-blog/assets/js/179.b335165a.js"><link rel="prefetch" href="/my-blog/assets/js/18.b34227e5.js"><link rel="prefetch" href="/my-blog/assets/js/180.67d9ab46.js"><link rel="prefetch" href="/my-blog/assets/js/181.9b301e35.js"><link rel="prefetch" href="/my-blog/assets/js/182.0e102a2d.js"><link rel="prefetch" href="/my-blog/assets/js/183.43459312.js"><link rel="prefetch" href="/my-blog/assets/js/184.fda40b25.js"><link rel="prefetch" href="/my-blog/assets/js/185.2fdcdc84.js"><link rel="prefetch" href="/my-blog/assets/js/186.3f31eaf2.js"><link rel="prefetch" href="/my-blog/assets/js/187.281d1436.js"><link rel="prefetch" href="/my-blog/assets/js/188.d5224015.js"><link rel="prefetch" href="/my-blog/assets/js/189.0972390f.js"><link rel="prefetch" href="/my-blog/assets/js/19.ec4eb9de.js"><link rel="prefetch" href="/my-blog/assets/js/190.ca92c76c.js"><link rel="prefetch" href="/my-blog/assets/js/191.1f7905ed.js"><link rel="prefetch" href="/my-blog/assets/js/192.b692c548.js"><link rel="prefetch" href="/my-blog/assets/js/193.e6770e7f.js"><link rel="prefetch" href="/my-blog/assets/js/194.0414cd71.js"><link rel="prefetch" href="/my-blog/assets/js/195.332324a7.js"><link rel="prefetch" href="/my-blog/assets/js/196.253cd62c.js"><link rel="prefetch" href="/my-blog/assets/js/197.50d8d323.js"><link rel="prefetch" href="/my-blog/assets/js/198.da2be3bf.js"><link rel="prefetch" href="/my-blog/assets/js/199.37e49aeb.js"><link rel="prefetch" href="/my-blog/assets/js/2.bb3c2c47.js"><link rel="prefetch" href="/my-blog/assets/js/20.92a01666.js"><link rel="prefetch" href="/my-blog/assets/js/21.c74d5dde.js"><link rel="prefetch" href="/my-blog/assets/js/22.ce0433c3.js"><link rel="prefetch" href="/my-blog/assets/js/23.69439d49.js"><link rel="prefetch" href="/my-blog/assets/js/24.b057c9e5.js"><link rel="prefetch" href="/my-blog/assets/js/25.918e8d83.js"><link rel="prefetch" href="/my-blog/assets/js/26.fe13e2d3.js"><link rel="prefetch" href="/my-blog/assets/js/27.c3ca8fe3.js"><link rel="prefetch" href="/my-blog/assets/js/28.30a417d8.js"><link rel="prefetch" href="/my-blog/assets/js/29.e375d353.js"><link rel="prefetch" href="/my-blog/assets/js/30.3069ab70.js"><link rel="prefetch" href="/my-blog/assets/js/31.647b7c22.js"><link rel="prefetch" href="/my-blog/assets/js/32.47c12ff3.js"><link rel="prefetch" href="/my-blog/assets/js/33.5700311a.js"><link rel="prefetch" href="/my-blog/assets/js/34.39f86e33.js"><link rel="prefetch" href="/my-blog/assets/js/35.0317ca56.js"><link rel="prefetch" href="/my-blog/assets/js/36.1a72a783.js"><link rel="prefetch" href="/my-blog/assets/js/37.61be6ef9.js"><link rel="prefetch" href="/my-blog/assets/js/38.28aa3cd1.js"><link rel="prefetch" href="/my-blog/assets/js/39.837f3e91.js"><link rel="prefetch" href="/my-blog/assets/js/4.59ea745b.js"><link rel="prefetch" href="/my-blog/assets/js/40.88a919e6.js"><link rel="prefetch" href="/my-blog/assets/js/41.b1570f0f.js"><link rel="prefetch" href="/my-blog/assets/js/42.e8269fb8.js"><link rel="prefetch" href="/my-blog/assets/js/43.ff9eda71.js"><link rel="prefetch" href="/my-blog/assets/js/44.6a5a602c.js"><link rel="prefetch" href="/my-blog/assets/js/45.124f7425.js"><link rel="prefetch" href="/my-blog/assets/js/46.f669140b.js"><link rel="prefetch" href="/my-blog/assets/js/47.5c357118.js"><link rel="prefetch" href="/my-blog/assets/js/48.df63cc62.js"><link rel="prefetch" href="/my-blog/assets/js/49.3b5e6045.js"><link rel="prefetch" href="/my-blog/assets/js/5.cdd16ccc.js"><link rel="prefetch" href="/my-blog/assets/js/50.df0e3b91.js"><link rel="prefetch" href="/my-blog/assets/js/51.d17a87da.js"><link rel="prefetch" href="/my-blog/assets/js/52.fcfc302a.js"><link rel="prefetch" href="/my-blog/assets/js/53.11482175.js"><link rel="prefetch" href="/my-blog/assets/js/54.5fd39631.js"><link rel="prefetch" href="/my-blog/assets/js/55.e0690114.js"><link rel="prefetch" href="/my-blog/assets/js/56.b1964af5.js"><link rel="prefetch" href="/my-blog/assets/js/57.5a38f88d.js"><link rel="prefetch" href="/my-blog/assets/js/58.78487853.js"><link rel="prefetch" href="/my-blog/assets/js/59.151fea2b.js"><link rel="prefetch" href="/my-blog/assets/js/6.bf2d89db.js"><link rel="prefetch" href="/my-blog/assets/js/60.a66ebf27.js"><link rel="prefetch" href="/my-blog/assets/js/61.eb9c600c.js"><link rel="prefetch" href="/my-blog/assets/js/62.1f4682ee.js"><link rel="prefetch" href="/my-blog/assets/js/63.56a7cb25.js"><link rel="prefetch" href="/my-blog/assets/js/64.7a9118a1.js"><link rel="prefetch" href="/my-blog/assets/js/65.7397589a.js"><link rel="prefetch" href="/my-blog/assets/js/66.3602c887.js"><link rel="prefetch" href="/my-blog/assets/js/67.c1546cc4.js"><link rel="prefetch" href="/my-blog/assets/js/68.546a30d9.js"><link rel="prefetch" href="/my-blog/assets/js/69.3c05685d.js"><link rel="prefetch" href="/my-blog/assets/js/7.990a607f.js"><link rel="prefetch" href="/my-blog/assets/js/70.a23795f4.js"><link rel="prefetch" href="/my-blog/assets/js/71.882980c3.js"><link rel="prefetch" href="/my-blog/assets/js/72.8d86cadc.js"><link rel="prefetch" href="/my-blog/assets/js/73.58b6dcf7.js"><link rel="prefetch" href="/my-blog/assets/js/74.36ea8b04.js"><link rel="prefetch" href="/my-blog/assets/js/75.ac8259cc.js"><link rel="prefetch" href="/my-blog/assets/js/76.86a4a403.js"><link rel="prefetch" href="/my-blog/assets/js/77.4b2028c4.js"><link rel="prefetch" href="/my-blog/assets/js/78.4c17fbe2.js"><link rel="prefetch" href="/my-blog/assets/js/79.980b1a2f.js"><link rel="prefetch" href="/my-blog/assets/js/8.5077a692.js"><link rel="prefetch" href="/my-blog/assets/js/80.7b306732.js"><link rel="prefetch" href="/my-blog/assets/js/81.678bb7a5.js"><link rel="prefetch" href="/my-blog/assets/js/82.1aaffd78.js"><link rel="prefetch" href="/my-blog/assets/js/83.5d3ab81c.js"><link rel="prefetch" href="/my-blog/assets/js/84.f73b6af9.js"><link rel="prefetch" href="/my-blog/assets/js/85.87853e7d.js"><link rel="prefetch" href="/my-blog/assets/js/86.7b500b5b.js"><link rel="prefetch" href="/my-blog/assets/js/87.4cc14da6.js"><link rel="prefetch" href="/my-blog/assets/js/88.4dcb650c.js"><link rel="prefetch" href="/my-blog/assets/js/89.a7fc0ea0.js"><link rel="prefetch" href="/my-blog/assets/js/9.2b63b480.js"><link rel="prefetch" href="/my-blog/assets/js/90.937b01ba.js"><link rel="prefetch" href="/my-blog/assets/js/92.d88ef0fc.js"><link rel="prefetch" href="/my-blog/assets/js/93.f78b39e0.js"><link rel="prefetch" href="/my-blog/assets/js/94.20e19783.js"><link rel="prefetch" href="/my-blog/assets/js/95.7192b73a.js"><link rel="prefetch" href="/my-blog/assets/js/96.34de2515.js"><link rel="prefetch" href="/my-blog/assets/js/97.7644618c.js"><link rel="prefetch" href="/my-blog/assets/js/98.f4af2778.js"><link rel="prefetch" href="/my-blog/assets/js/99.2659a2a1.js">
+    <link rel="stylesheet" href="/my-blog/assets/css/0.styles.ecc0b0a4.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/my-blog/" class="home-link router-link-active"><img src="/my-blog/img/logo.png" alt="程序猿小萨" class="logo"> <span class="site-name can-hide">程序猿小萨</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/my-blog/article/introduction/About.html" class="nav-link">
+  关于文档
+</a></div><div class="nav-item"><a href="/my-blog/article/introduction/Flag.html" class="nav-link">
+  Plan
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术栈" class="dropdown-title"><span class="title">技术栈</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术栈" class="mobile-dropdown-title"><span class="title">技术栈</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/my-blog/article/01-HTML/HTML.html" class="nav-link">
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/my-blog/article/02-CSS/notes/day01.html" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/my-blog/article/03-H5C3/HTML5&amp;CSS3.html" class="nav-link">
+  H5C3
+</a></li><li class="dropdown-subitem"><a href="/my-blog/article/04-Project/notes/day01-pingyougou.html" class="nav-link">
+  实战
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/my-blog/article/05-mobile/H5C3/HTML5CSS3_day01.html" class="nav-link">
+  移动Web
+</a></li><li class="dropdown-item"><h4>
+          JavaScript
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/my-blog/article/06-JavaScript/01jichu/day01/day01.html" class="nav-link">
+  基础
+</a></li><li class="dropdown-subitem"><a href="/my-blog/article/06-JavaScript/02-WebAPI/day01/day01_WebAPIs.html" class="nav-link">
+  WebAPI
+</a></li><li class="dropdown-subitem"><a href="/my-blog/article/06-JavaScript/03-JQuery/day01/day01_jQuery.html" class="nav-link">
+  jQuery
+</a></li><li class="dropdown-subitem"><a href="/my-blog/article/06-JavaScript/04-Echarts/数据可视化.html" class="nav-link">
+  Echarts
+</a></li><li class="dropdown-subitem"><a href="/my-blog/article/06-JavaScript/05-gaoji/day01/JavaScript高级第01天笔记.html" class="nav-link">
+  高级
+</a></li></ul></li><li class="dropdown-item"><h4>
+          框架
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/my-blog/article/08-小程序/standard.html" class="nav-link">
+  小程序
+</a></li><li class="dropdown-subitem"><a href="/my-blog/article/07-Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/my-blog/article/09-React/" class="nav-link">
+  React
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具" class="mobile-dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          随笔
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/my-blog/article/soft/Document.html" class="nav-link">
+  博客
+</a></li><li class="dropdown-subitem"><a href="/my-blog/article/soft/bookmark.html" class="nav-link">
+  书签
+</a></li><li class="dropdown-subitem"><a href="/my-blog/article/soft/Notion.html" class="nav-link">
+  Notion
+</a></li><li class="dropdown-subitem"><a href="/my-blog/article/soft/research.html" class="nav-link">
+  待研究
+</a></li></ul></li><li class="dropdown-item"><h4>
+          在线编辑
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://tinypng.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  图片压缩
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          充电站
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.imooc.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  慕课网
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://www.51zxw.net/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  我要自学网
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          博客
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://space.bilibili.com/1562860055/favlist?fid=1592147955&amp;ftype=create" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  B站
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://juejin.im/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://blog.csdn.net/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  CSDN
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://www.effie.co/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  effie
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div><div class="nav-item"><a href="/my-blog/article/mianshi/Detail.html" class="nav-link">
+  面试
+</a></div> <a href="https://gitee.com/qarabala/my-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    源码
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/my-blog/article/introduction/About.html" class="nav-link">
+  关于文档
+</a></div><div class="nav-item"><a href="/my-blog/article/introduction/Flag.html" class="nav-link">
+  Plan
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术栈" class="dropdown-title"><span class="title">技术栈</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术栈" class="mobile-dropdown-title"><span class="title">技术栈</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/my-blog/article/01-HTML/HTML.html" class="nav-link">
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/my-blog/article/02-CSS/notes/day01.html" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/my-blog/article/03-H5C3/HTML5&amp;CSS3.html" class="nav-link">
+  H5C3
+</a></li><li class="dropdown-subitem"><a href="/my-blog/article/04-Project/notes/day01-pingyougou.html" class="nav-link">
+  实战
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/my-blog/article/05-mobile/H5C3/HTML5CSS3_day01.html" class="nav-link">
+  移动Web
+</a></li><li class="dropdown-item"><h4>
+          JavaScript
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/my-blog/article/06-JavaScript/01jichu/day01/day01.html" class="nav-link">
+  基础
+</a></li><li class="dropdown-subitem"><a href="/my-blog/article/06-JavaScript/02-WebAPI/day01/day01_WebAPIs.html" class="nav-link">
+  WebAPI
+</a></li><li class="dropdown-subitem"><a href="/my-blog/article/06-JavaScript/03-JQuery/day01/day01_jQuery.html" class="nav-link">
+  jQuery
+</a></li><li class="dropdown-subitem"><a href="/my-blog/article/06-JavaScript/04-Echarts/数据可视化.html" class="nav-link">
+  Echarts
+</a></li><li class="dropdown-subitem"><a href="/my-blog/article/06-JavaScript/05-gaoji/day01/JavaScript高级第01天笔记.html" class="nav-link">
+  高级
+</a></li></ul></li><li class="dropdown-item"><h4>
+          框架
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/my-blog/article/08-小程序/standard.html" class="nav-link">
+  小程序
+</a></li><li class="dropdown-subitem"><a href="/my-blog/article/07-Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/my-blog/article/09-React/" class="nav-link">
+  React
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具" class="mobile-dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          随笔
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/my-blog/article/soft/Document.html" class="nav-link">
+  博客
+</a></li><li class="dropdown-subitem"><a href="/my-blog/article/soft/bookmark.html" class="nav-link">
+  书签
+</a></li><li class="dropdown-subitem"><a href="/my-blog/article/soft/Notion.html" class="nav-link">
+  Notion
+</a></li><li class="dropdown-subitem"><a href="/my-blog/article/soft/research.html" class="nav-link">
+  待研究
+</a></li></ul></li><li class="dropdown-item"><h4>
+          在线编辑
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://tinypng.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  图片压缩
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          充电站
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.imooc.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  慕课网
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://www.51zxw.net/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  我要自学网
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          博客
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://space.bilibili.com/1562860055/favlist?fid=1592147955&amp;ftype=create" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  B站
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://juejin.im/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://blog.csdn.net/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  CSDN
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://www.effie.co/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  effie
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div><div class="nav-item"><a href="/my-blog/article/mianshi/Detail.html" class="nav-link">
+  面试
+</a></div> <a href="https://gitee.com/qarabala/my-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    源码
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>HTML5CSS3</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/my-blog/article/05-mobile/H5C3/HTML5CSS3_day01.html" class="sidebar-link">HTML5-day01</a></li><li><a href="/my-blog/article/05-mobile/H5C3/HTML5CSS3_day02.html" class="sidebar-link">HTML5-day02</a></li><li><a href="/my-blog/article/05-mobile/H5C3/HTML5CSS3_day03.html" class="sidebar-link">HTML5-day03</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Flex布局</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/my-blog/article/05-mobile/Flex/移动web开发_流式布局.html" class="sidebar-link">移动web开发流式布局</a></li><li><a href="/my-blog/article/05-mobile/Flex/移动web开发_flex布局.html" class="sidebar-link">移动web开发——flex布局</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>移动端布局</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/my-blog/article/05-mobile/mobile-web/移动web开发_rem布局.html" class="sidebar-link">移动web开发之rem布局</a></li><li><a href="/my-blog/article/05-mobile/mobile-web/移动web开发_vw布局.html" class="sidebar-link">移动web开发vw布局</a></li><li><a href="/my-blog/article/05-mobile/mobile-web/移动web开发之响应式布局.html" class="active sidebar-link">移动端WEB开发之响应式布局</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/my-blog/article/05-mobile/mobile-web/移动web开发之响应式布局.html#_1-0-响应式开发原理" class="sidebar-link">1.0 响应式开发原理</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/my-blog/article/05-mobile/mobile-web/移动web开发之响应式布局.html#_1-1-响应式开发原理" class="sidebar-link">1.1 响应式开发原理</a></li><li class="sidebar-sub-header"><a href="/my-blog/article/05-mobile/mobile-web/移动web开发之响应式布局.html#_1-2-媒体查询的编写位置及顺序" class="sidebar-link">1.2 媒体查询的编写位置及顺序</a></li><li class="sidebar-sub-header"><a href="/my-blog/article/05-mobile/mobile-web/移动web开发之响应式布局.html#_1-3-响应断点-阈值-设定" class="sidebar-link">1.3 响应断点（阈值）设定</a></li><li class="sidebar-sub-header"><a href="/my-blog/article/05-mobile/mobile-web/移动web开发之响应式布局.html#_1-4-响应式栅格系统" class="sidebar-link">1.4 响应式栅格系统</a></li><li class="sidebar-sub-header"><a href="/my-blog/article/05-mobile/mobile-web/移动web开发之响应式布局.html#_1-5-响应式交互实现" class="sidebar-link">1.5 响应式交互实现</a></li><li class="sidebar-sub-header"><a href="/my-blog/article/05-mobile/mobile-web/移动web开发之响应式布局.html#_1-6-响应式布局容器" class="sidebar-link">1.6 响应式布局容器</a></li></ul></li><li class="sidebar-sub-header"><a href="/my-blog/article/05-mobile/mobile-web/移动web开发之响应式布局.html#_2-0-bootstrap的介绍" class="sidebar-link">2.0 bootstrap的介绍</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/my-blog/article/05-mobile/mobile-web/移动web开发之响应式布局.html#_2-1bootstrap简介" class="sidebar-link">2.1Bootstrap简介</a></li><li class="sidebar-sub-header"><a href="/my-blog/article/05-mobile/mobile-web/移动web开发之响应式布局.html#_2-2-bootstrap优点" class="sidebar-link">2.2 bootstrap优点</a></li><li class="sidebar-sub-header"><a href="/my-blog/article/05-mobile/mobile-web/移动web开发之响应式布局.html#_2-3-版本简介" class="sidebar-link">2.3 版本简介</a></li><li class="sidebar-sub-header"><a href="/my-blog/article/05-mobile/mobile-web/移动web开发之响应式布局.html#_2-4bootstrap基本使用" class="sidebar-link">2.4bootstrap基本使用</a></li><li class="sidebar-sub-header"><a href="/my-blog/article/05-mobile/mobile-web/移动web开发之响应式布局.html#_2-5-bootstrap布局容器" class="sidebar-link">2.5 bootstrap布局容器</a></li><li class="sidebar-sub-header"><a href="/my-blog/article/05-mobile/mobile-web/移动web开发之响应式布局.html#_2-6-bootstrap栅格系统" class="sidebar-link">2.6 bootstrap栅格系统</a></li></ul></li><li class="sidebar-sub-header"><a href="/my-blog/article/05-mobile/mobile-web/移动web开发之响应式布局.html#_3-0-阿里百秀案例制作" class="sidebar-link">3.0 阿里百秀案例制作</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/my-blog/article/05-mobile/mobile-web/移动web开发之响应式布局.html#_3-1-技术选型" class="sidebar-link">3.1 技术选型</a></li></ul></li></ul></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>grid网格布局</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/my-blog/article/05-mobile/grid/网格布局.html" class="sidebar-link">网格布局</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="移动端web开发之响应式布局"><a href="#移动端web开发之响应式布局" class="header-anchor">#</a> 移动端WEB开发之响应式布局</h1> <h2 id="_1-0-响应式开发原理"><a href="#_1-0-响应式开发原理" class="header-anchor">#</a> 1.0 响应式开发原理</h2> <h3 id="_1-1-响应式开发原理"><a href="#_1-1-响应式开发原理" class="header-anchor">#</a> 1.1 响应式开发原理</h3> <p>就是使用媒体查询针对不同宽度的设备进行布局和样式的设置，从而适配不同设备的目的。</p> <p>设备的划分情况：</p> <ul><li>小于768的为超小屏幕（手机）</li> <li>768~992之间的为小屏设备（平板）</li> <li>992~1200的中等屏幕（桌面显示器）</li> <li>大于1200的宽屏设备（大桌面显示器）</li></ul> <div><img src="/my-blog/assets/img/媒体查询2022-02-27_11-10-36.25c862f3.jpg" width="500"></div> <div data-config="" data-type="vanilla" data-code="%3Chtml%3E%0A%0A%3Chead%3E%0A%20%20%20%20%3C!--%20portrait%E8%AF%A5%E8%AE%BE%E5%A4%87%E6%98%AF%E7%BA%B5%E5%90%91%E7%9A%84%EF%BC%8C%E5%8D%B3%E9%AB%98%E5%BA%A6%E5%A4%A7%E4%BA%8E%E6%88%96%E7%AD%89%E4%BA%8E%E5%AE%BD%E5%BA%A6%E3%80%82landscape%E8%AE%BE%E5%A4%87%E5%A4%84%E4%BA%8E%E6%A8%AA%E5%90%91%E6%96%B9%E5%90%91%EF%BC%8C%E5%8D%B3%E5%AE%BD%E5%BA%A6%E5%A4%A7%E4%BA%8E%E9%AB%98%E5%BA%A6%E3%80%82%20--%3E%0A%20%20%20%20%3Clink%20rel%3D%22stylesheet%22%20href%3D%22.%2Fa.css%22%20media%3D%22(orientation%3A%20portrait)%22%3E%0A%20%20%20%20%3Clink%20rel%3D%22stylesheet%22%20href%3D%22.%2Fb.css%22%20media%3D%22(orientation%3A%20landscape)%22%3E%0A%3C%2Fhead%3E%0A%0A%3Cbody%3E%0A%20%20%20%20%3Cdiv%20class%3D%22box%22%3Eaaaaaaaaaa%3C%2Fdiv%3E%0A%3C%2Fbody%3E%0A%0A%3C%2Fhtml%3E%0A%0A%3Cstyle%3E%0A%20%20%2F*%20%40media%20print%20%7B%0A%20%20%20%20%20%20.box%7B%0A%20%20%20%20%20%20%20%20%20%20font-size%3A%2060px%3B%0A%20%20%20%20%20%20%7D%0A%20%20%7D%20*%2F%0A%0A%20%20%2F*%20max-width%3A%201200px%20*%2F%0A%20%20%2F*%20%40media%20(%20min-width%3A%20700px%20)%20%7B%20%20%0A%20%20%20%20%20%20.box%20%7B%0A%20%20%20%20%20%20%20%20%20%20width%3A%20200px%3B%0A%20%20%20%20%20%20%20%20%20%20height%3A%20200px%3B%0A%20%20%20%20%20%20%20%20%20%20background%3A%20pink%3B%0A%20%20%20%20%20%20%7D%0A%20%20%7D%20*%2F%0A%0A%20%20%2F*%20orientation%E6%98%AF%E6%89%8B%E6%9C%BA%E6%A8%AA%E7%9D%80%E6%8E%92%E7%9A%84%E6%84%8F%E6%80%9D%EF%BC%88%E6%97%8B%E8%BD%AC%EF%BC%89%20*%2F%0A%20%20%2F*%20%40media%20(orientation%3A%20portrait)%20%7B%0A%20%20%20%20%20%20.box%20%7B%0A%20%20%20%20%20%20%20%20%20%20width%3A%20200px%3B%0A%20%20%20%20%20%20%20%20%20%20height%3A%20200px%3B%0A%20%20%20%20%20%20%20%20%20%20background%3A%20pink%3B%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%0A%20%20%40media%20(orientation%3A%20landscape)%20%7B%0A%20%20%20%20%20%20.box%20%7B%0A%20%20%20%20%20%20%20%20%20%20width%3A%20200px%3B%0A%20%20%20%20%20%20%20%20%20%20height%3A%20200px%3B%0A%20%20%20%20%20%20%20%20%20%20background%3A%20skyblue%3B%0A%20%20%20%20%20%20%7D%0A%20%20%7D%20*%2F%0A%0A%20%20%2F*%20%40media%20screen%20and%20(%20min-width%3A%20700px%20)%20and%20(max-width%3A%201200px)%20%7B%20%20%0A%20%20%20%20%20%20.box%20%7B%0A%20%20%20%20%20%20%20%20%20%20width%3A%20200px%3B%0A%20%20%20%20%20%20%20%20%20%20height%3A%20200px%3B%0A%20%20%20%20%20%20%20%20%20%20background%3A%20pink%3B%0A%20%20%20%20%20%20%7D%0A%20%20%7D%20*%2F%0A%0A%20%20%2F*%20%40media%20not%20screen%20and%20(%20min-width%3A%20700px%20)%20%7B%20%20%0A%20%20%20%20%20%20.box%20%7B%0A%20%20%20%20%20%20%20%20%20%20width%3A%20200px%3B%0A%20%20%20%20%20%20%20%20%20%20height%3A%20200px%3B%0A%20%20%20%20%20%20%20%20%20%20background%3A%20pink%3B%0A%20%20%20%20%20%20%7D%0A%20%20%7D%20*%2F%0A%0A%20%20%2F*%20%40media%20screen%20%2C%20print%20and%20(%20min-width%3A%20700px%20)%20%7B%20%20%0A%20%20%20%20%20%20.box%20%7B%0A%20%20%20%20%20%20%20%20%20%20width%3A%20200px%3B%0A%20%20%20%20%20%20%20%20%20%20height%3A%20200px%3B%0A%20%20%20%20%20%20%20%20%20%20background%3A%20pink%3B%0A%20%20%20%20%20%20%7D%0A%20%20%7D%20*%2F%0A%3C%2Fstyle%3E%0A" class="vuepress-plugin-demo-block__wrapper" style="display:none;"><div class="vuepress-plugin-demo-block__display"><div class="vuepress-plugin-demo-block__app"></div></div> <div class="vuepress-plugin-demo-block__code"><div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!-- portrait该设备是纵向的，即高度大于或等于宽度。landscape设备处于横向方向，即宽度大于高度。 --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>stylesheet<span class="token punctuation">&quot;</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>./a.css<span class="token punctuation">&quot;</span></span> <span class="token attr-name">media</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>(orientation: portrait)<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>stylesheet<span class="token punctuation">&quot;</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>./b.css<span class="token punctuation">&quot;</span></span> <span class="token attr-name">media</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>(orientation: landscape)<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>box<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>aaaaaaaaaa<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token comment">/* @media print {
+      .box{
+          font-size: 60px;
+      }
+  } */</span>
+
+  <span class="token comment">/* max-width: 1200px */</span>
+  <span class="token comment">/* @media ( min-width: 700px ) {  
+      .box {
+          width: 200px;
+          height: 200px;
+          background: pink;
+      }
+  } */</span>
+
+  <span class="token comment">/* orientation是手机横着排的意思（旋转） */</span>
+  <span class="token comment">/* @media (orientation: portrait) {
+      .box {
+          width: 200px;
+          height: 200px;
+          background: pink;
+      }
+  }
+
+  @media (orientation: landscape) {
+      .box {
+          width: 200px;
+          height: 200px;
+          background: skyblue;
+      }
+  } */</span>
+
+  <span class="token comment">/* @media screen and ( min-width: 700px ) and (max-width: 1200px) {  
+      .box {
+          width: 200px;
+          height: 200px;
+          background: pink;
+      }
+  } */</span>
+
+  <span class="token comment">/* @media not screen and ( min-width: 700px ) {  
+      .box {
+          width: 200px;
+          height: 200px;
+          background: pink;
+      }
+  } */</span>
+
+  <span class="token comment">/* @media screen , print and ( min-width: 700px ) {  
+      .box {
+          width: 200px;
+          height: 200px;
+          background: pink;
+      }
+  } */</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br></div></div></div> <div class="vuepress-plugin-demo-block__footer"></div></div> <h3 id="_1-2-媒体查询的编写位置及顺序"><a href="#_1-2-媒体查询的编写位置及顺序" class="header-anchor">#</a> 1.2 媒体查询的编写位置及顺序</h3> <ul><li>添加到样式表的地步、对CSS进行优先级的覆盖</li> <li>移动端 -&gt; PC端的设配原则：<code>min-width</code> 从小到大</li> <li>PC端 -&gt; 移动端的设配原则：<code>max-width</code> 从大到小</li></ul> <div data-config="" data-type="vanilla" data-code="%3Chtml%3E%0A%3Cbody%3E%0A%20%20%3Cdiv%20class%3D%22box%22%3Eaaaaaa%3C%2Fdiv%3E%0A%3C%2Fbody%3E%0A%3C%2Fhtml%3E%0A%0A%3Cstyle%3E%0A%20%20%2F*%20.box%7B%0A%20%20%20%20%20%20%20%20%20%20width%3A100px%3B%0A%20%20%20%20%20%20%20%20%20%20height%3A100px%3B%0A%20%20%20%20%20%20%20%20%20%20background%3Ablue%3B%0A%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%40media%20(min-width%3A%20700px)%20%7B%0A%20%20%20%20%20%20%20%20%20%20.box%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20background%3A%20pink%3B%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%20*%2F%0A%0A%20%20%2F*%20.box%7B%0A%20%20%20%20%20%20%20%20%20%20width%3A100px%3B%0A%20%20%20%20%20%20%20%20%20%20height%3A100px%3B%0A%20%20%20%20%20%20%20%20%20%20background%3Ablue%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20*%2F%0A%20%20%2F*%20%E5%A6%82%E4%BD%95%E5%A4%9A%E6%9D%A1%E4%BB%B6%E7%9A%84%E6%97%B6%E5%80%99%EF%BC%8Cmin-width%E7%BC%96%E5%86%99%E9%A1%BA%E5%BA%8F%EF%BC%9A%E4%BB%8E%E5%B0%8F%E5%88%B0%E5%A4%A7%E8%BF%9B%E8%A1%8C%E9%80%82%E9%85%8D%20*%2F%0A%20%20%2F*%20%E5%A6%82%E6%9E%9C%E5%85%88%E5%86%99min-width%3A%201000px%EF%BC%8C%E7%84%B6%E5%90%8E%E5%86%8D%E5%86%99min-width%3A%20700px%E7%9A%84%E8%AF%9Dmin-width%3A%201000px%E6%B0%B8%E8%BF%9C%E9%83%BD%E4%B8%8D%E4%BC%9A%E7%94%9F%E6%95%88%E7%9A%84%EF%BC%8C%E5%9B%A0%E4%B8%BA%E5%AE%83%E6%98%AF%E6%8C%89%E9%A1%BA%E5%BA%8F%E6%9D%A5%E7%9A%84*%2F%0A%20%20%2F*%20min-width%E6%96%B9%E5%BC%8F%EF%BC%9A%E7%A7%BB%E5%8A%A8%E4%BC%98%E5%85%88%E7%9A%84%E5%8E%9F%E5%88%99%EF%BC%8C%E5%85%88%E7%BC%96%E5%86%99%E7%A7%BB%E5%8A%A8%E7%AB%AF%E8%AE%BE%E5%A4%87%EF%BC%8C%E7%84%B6%E5%90%8E%E5%93%8D%E5%BA%94%E5%BC%8F%E8%BF%87%E6%B8%A1%E5%88%B0PC%E7%AB%AF%20*%2F%0A%20%20%2F*%20%40media%20(min-width%3A%20700px)%20%7B%0A%20%20%20%20%20%20%20%20%20%20.box%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20background%3A%20pink%3B%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%40media%20(min-width%3A%201000px)%20%7B%0A%20%20%20%20%20%20%20%20%20%20.box%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20background%3A%20green%3B%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%20*%2F%0A%0A%0A%20%20%2F*%20%E5%A6%82%E4%BD%95%E4%BB%8EPC%E7%AB%AF%E5%93%8D%E5%BA%94%E5%BC%8F%E8%BF%87%E6%B8%A1%E5%88%B0%E7%A7%BB%E5%8A%A8%E7%AB%AF%EF%BC%9F%20max-width%20%2C%20%E4%BB%8E%E5%A4%A7%E5%88%B0%E5%B0%8F%E5%8C%BA%E7%BC%96%E5%86%99%20*%2F%0A%0A%20%20.box%20%7B%0A%20%20%20%20width%3A%20100px%3B%0A%20%20%20%20height%3A%20100px%3B%0A%20%20%20%20background%3A%20blue%3B%0A%20%20%7D%0A%0A%20%20%40media%20(max-width%3A%201000px)%20%7B%0A%20%20%20%20.box%20%7B%0A%20%20%20%20%20%20background%3A%20pink%3B%0A%20%20%20%20%7D%0A%20%20%7D%0A%0A%20%20%40media%20(max-width%3A%20700px)%20%7B%0A%20%20%20%20.box%20%7B%0A%20%20%20%20%20%20background%3A%20green%3B%0A%20%20%20%20%7D%0A%20%20%7D%0A%3C%2Fstyle%3E%0A" class="vuepress-plugin-demo-block__wrapper" style="display:none;"><div class="vuepress-plugin-demo-block__display"><div class="vuepress-plugin-demo-block__app"></div></div> <div class="vuepress-plugin-demo-block__code"><div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>box<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>aaaaaa<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token comment">/* .box{
+          width:100px;
+          height:100px;
+          background:blue;
+      }
+
+      @media (min-width: 700px) {
+          .box{
+              background: pink;
+          }
+      } */</span>
+
+  <span class="token comment">/* .box{
+          width:100px;
+          height:100px;
+          background:blue;
+      }
+      */</span>
+  <span class="token comment">/* 如何多条件的时候，min-width编写顺序：从小到大进行适配 */</span>
+  <span class="token comment">/* 如果先写min-width: 1000px，然后再写min-width: 700px的话min-width: 1000px永远都不会生效的，因为它是按顺序来的*/</span>
+  <span class="token comment">/* min-width方式：移动优先的原则，先编写移动端设备，然后响应式过渡到PC端 */</span>
+  <span class="token comment">/* @media (min-width: 700px) {
+          .box{
+              background: pink;
+          }
+      }
+
+      @media (min-width: 1000px) {
+          .box{
+              background: green;
+          }
+      } */</span>
+
+
+  <span class="token comment">/* 如何从PC端响应式过渡到移动端？ max-width , 从大到小区编写 */</span>
+
+  <span class="token selector">.box</span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">max-width</span><span class="token punctuation">:</span> 1000px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+    <span class="token selector">.box</span> <span class="token punctuation">{</span>
+      <span class="token property">background</span><span class="token punctuation">:</span> pink<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">max-width</span><span class="token punctuation">:</span> 700px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+    <span class="token selector">.box</span> <span class="token punctuation">{</span>
+      <span class="token property">background</span><span class="token punctuation">:</span> green<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br></div></div></div> <div class="vuepress-plugin-demo-block__footer"></div></div> <h3 id="_1-3-响应断点-阈值-设定"><a href="#_1-3-响应断点-阈值-设定" class="header-anchor">#</a> 1.3 响应断点（阈值）设定</h3> <ul><li>Extra small &lt; 576px</li> <li>Small &gt;= 576px、-sm</li> <li>Medium &gt;= 768px、-md</li> <li>Large &gt;= 992px、-lg</li> <li>X-Large &gt;= 1200px、-xl</li> <li>XX-Large &gt;= 1400px、-xxl</li></ul> <div data-config="" data-type="vanilla" data-code="%3Chtml%3E%0A%3Cbody%3E%0A%20%20%3Cdiv%20class%3D%22d-none%22%3E11111%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22d-sm-none%22%3E22222%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22d-md-none%22%3E33333%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22d-lg-none%22%3E44444%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22d-xl-none%22%3E55555%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22d-xxl-none%22%3E66666%3C%2Fdiv%3E%0A%3C%2Fbody%3E%0A%3C%2Fhtml%3E%0A%0A%3Cstyle%3E%0A%20%20.d-none%20%7B%0A%20%20%20%20display%3A%20none%3B%0A%20%20%7D%0A%0A%20%20%40media%20(min-width%3A%20576px)%20%7B%0A%20%20%20%20.d-sm-none%20%7B%0A%20%20%20%20%20%20display%3A%20none%3B%0A%20%20%20%20%7D%0A%20%20%7D%0A%0A%20%20%40media%20(min-width%3A%20768px)%20%7B%0A%20%20%20%20.d-md-none%20%7B%0A%20%20%20%20%20%20display%3A%20none%3B%0A%20%20%20%20%7D%0A%20%20%7D%0A%0A%20%20%40media%20(min-width%3A%20992px)%20%7B%0A%20%20%20%20.d-lg-none%20%7B%0A%20%20%20%20%20%20display%3A%20none%3B%0A%20%20%20%20%7D%0A%20%20%7D%0A%0A%20%20%40media%20(min-width%3A%201200px)%20%7B%0A%20%20%20%20.d-xl-none%20%7B%0A%20%20%20%20%20%20display%3A%20none%3B%0A%20%20%20%20%7D%0A%20%20%7D%0A%0A%20%20%40media%20(min-width%3A%201400px)%20%7B%0A%20%20%20%20.d-xxl-none%20%7B%0A%20%20%20%20%20%20display%3A%20none%3B%0A%20%20%20%20%7D%0A%20%20%7D%0A%3C%2Fstyle%3E%0A" class="vuepress-plugin-demo-block__wrapper" style="display:none;"><div class="vuepress-plugin-demo-block__display"><div class="vuepress-plugin-demo-block__app"></div></div> <div class="vuepress-plugin-demo-block__code"><div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>d-none<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>11111<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>d-sm-none<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>22222<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>d-md-none<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>33333<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>d-lg-none<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>44444<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>d-xl-none<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>55555<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>d-xxl-none<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>66666<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">.d-none</span> <span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 576px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+    <span class="token selector">.d-sm-none</span> <span class="token punctuation">{</span>
+      <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 768px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+    <span class="token selector">.d-md-none</span> <span class="token punctuation">{</span>
+      <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 992px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+    <span class="token selector">.d-lg-none</span> <span class="token punctuation">{</span>
+      <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 1200px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+    <span class="token selector">.d-xl-none</span> <span class="token punctuation">{</span>
+      <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 1400px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+    <span class="token selector">.d-xxl-none</span> <span class="token punctuation">{</span>
+      <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br></div></div></div> <div class="vuepress-plugin-demo-block__footer"></div></div> <h3 id="_1-4-响应式栅格系统"><a href="#_1-4-响应式栅格系统" class="header-anchor">#</a> 1.4 响应式栅格系统</h3> <ul><li>栅格（网格）布局 + 断点设定</li></ul> <div data-config="" data-type="vanilla" data-code="%3Chtml%3E%0A%3Cbody%3E%0A%20%20%3C!--%20%3Cdiv%20class%3D%22row%22%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-3%22%3Ecol-3%3C%2Fdiv%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-3%22%3Ecol-3%3C%2Fdiv%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-3%22%3Ecol-3%3C%2Fdiv%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-3%22%3Ecol-3%3C%2Fdiv%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22row%22%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-sm-3%22%3Ecol-sm-3%3C%2Fdiv%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-sm-3%22%3Ecol-sm-3%3C%2Fdiv%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-sm-3%22%3Ecol-sm-3%3C%2Fdiv%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-sm-3%22%3Ecol-sm-3%3C%2Fdiv%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22row%22%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-md-3%22%3Ecol-md-3%3C%2Fdiv%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-md-3%22%3Ecol-md-3%3C%2Fdiv%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-md-3%22%3Ecol-md-3%3C%2Fdiv%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-md-3%22%3Ecol-md-3%3C%2Fdiv%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22row%22%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-lg-3%22%3Ecol-lg-3%3C%2Fdiv%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-lg-3%22%3Ecol-lg-3%3C%2Fdiv%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-lg-3%22%3Ecol-lg-3%3C%2Fdiv%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-lg-3%22%3Ecol-lg-3%3C%2Fdiv%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22row%22%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-xl-3%22%3Ecol-xl-3%3C%2Fdiv%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-xl-3%22%3Ecol-xl-3%3C%2Fdiv%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-xl-3%22%3Ecol-xl-3%3C%2Fdiv%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-xl-3%22%3Ecol-xl-3%3C%2Fdiv%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22row%22%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-xxl-3%22%3Ecol-xxl-3%3C%2Fdiv%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-xxl-3%22%3Ecol-xxl-3%3C%2Fdiv%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-xxl-3%22%3Ecol-xxl-3%3C%2Fdiv%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-xxl-3%22%3Ecol-xxl-3%3C%2Fdiv%3E%0A%20%20%20%20%3C%2Fdiv%3E%20--%3E%0A%0A%20%20%3Cdiv%20class%3D%22row%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22col-xxl-3%20col-lg-4%20col-sm-6%22%3Ecol%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22col-xxl-3%20col-lg-4%20col-sm-6%22%3Ecol%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22col-xxl-3%20col-lg-4%20col-sm-6%22%3Ecol%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22col-xxl-3%20col-lg-4%20col-sm-6%22%3Ecol%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22col-xxl-3%20col-lg-4%20col-sm-6%22%3Ecol%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22col-xxl-3%20col-lg-4%20col-sm-6%22%3Ecol%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22col-xxl-3%20col-lg-4%20col-sm-6%22%3Ecol%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22col-xxl-3%20col-lg-4%20col-sm-6%22%3Ecol%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22col-xxl-3%20col-lg-4%20col-sm-6%22%3Ecol%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22col-xxl-3%20col-lg-4%20col-sm-6%22%3Ecol%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22col-xxl-3%20col-lg-4%20col-sm-6%22%3Ecol%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22col-xxl-3%20col-lg-4%20col-sm-6%22%3Ecol%3C%2Fdiv%3E%0A%20%20%3C%2Fdiv%3E%0A%3C%2Fbody%3E%0A%3C%2Fhtml%3E%0A%0A%3Cstyle%3E%0A%20%20.row%20%7B%0A%20%20%20%20background%3A%20skyblue%3B%0A%20%20%20%20display%3A%20grid%3B%0A%20%20%20%20grid-template-columns%3A%20repeat(12%2C%201fr)%3B%0A%20%20%20%20grid-template-rows%3A%2050px%3B%0A%20%20%20%20grid-auto-rows%3A%2050px%3B%0A%20%20%7D%0A%0A%20%20.row%20div%20%7B%0A%20%20%20%20background%3A%20pink%3B%0A%20%20%20%20border%3A%201px%20black%20solid%3B%0A%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%2012%3B%0A%20%20%7D%0A%0A%20%20.row%20.col-1%20%7B%0A%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%201%3B%0A%20%20%7D%0A%0A%20%20.row%20.col-2%20%7B%0A%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%202%3B%0A%20%20%7D%0A%0A%20%20.row%20.col-3%20%7B%0A%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%203%3B%0A%20%20%7D%0A%0A%20%20.row%20.col-4%20%7B%0A%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%204%3B%0A%20%20%7D%0A%0A%20%20.row%20.col-5%20%7B%0A%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%205%3B%0A%20%20%7D%0A%0A%20%20.row%20.col-6%20%7B%0A%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%206%3B%0A%20%20%7D%0A%0A%20%20.row%20.col-7%20%7B%0A%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%207%3B%0A%20%20%7D%0A%0A%20%20.row%20.col-8%20%7B%0A%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%208%3B%0A%20%20%7D%0A%0A%20%20.row%20.col-9%20%7B%0A%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%209%3B%0A%20%20%7D%0A%0A%20%20.row%20.col-10%20%7B%0A%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%2010%3B%0A%20%20%7D%0A%0A%20%20.row%20.col-11%20%7B%0A%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%2011%3B%0A%20%20%7D%0A%0A%20%20.row%20.col-12%20%7B%0A%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%2012%3B%0A%20%20%7D%0A%0A%20%20%40media%20(min-width%3A%20576px)%20%7B%0A%20%20%20%20.row%20.col-sm-1%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%201%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-sm-2%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%202%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-sm-3%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%203%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-sm-4%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%204%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-sm-5%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%205%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-sm-6%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%206%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-sm-7%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%207%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-sm-8%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%208%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-sm-9%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%209%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-sm-10%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%2010%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-sm-11%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%2011%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-sm-12%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%2012%3B%0A%20%20%20%20%7D%0A%20%20%7D%0A%0A%20%20%40media%20(min-width%3A%20768px)%20%7B%0A%20%20%20%20.row%20.col-md-1%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%201%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-md-2%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%202%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-md-3%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%203%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-md-4%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%204%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-md-5%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%205%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-md-6%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%206%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-md-7%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%207%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-md-8%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%208%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-md-9%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%209%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-md-10%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%2010%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-md-11%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%2011%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-md-12%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%2012%3B%0A%20%20%20%20%7D%0A%20%20%7D%0A%0A%20%20%40media%20(min-width%3A%20992px)%20%7B%0A%20%20%20%20.row%20.col-lg-1%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%201%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-lg-2%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%202%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-lg-3%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%203%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-lg-4%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%204%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-lg-5%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%205%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-lg-6%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%206%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-lg-7%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%207%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-lg-8%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%208%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-lg-9%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%209%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-lg-10%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%2010%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-lg-11%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%2011%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-lg-12%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%2012%3B%0A%20%20%20%20%7D%0A%20%20%7D%0A%0A%20%20%40media%20(min-width%3A%201200px)%20%7B%0A%20%20%20%20.row%20.col-xl-1%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%201%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-xl-2%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%202%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-xl-3%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%203%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-xl-4%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%204%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-xl-5%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%205%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-xl-6%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%206%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-xl-7%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%207%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-xl-8%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%208%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-xl-9%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%209%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-xl-10%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%2010%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-xl-11%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%2011%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-xl-12%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%2012%3B%0A%20%20%20%20%7D%0A%20%20%7D%0A%0A%20%20%40media%20(min-width%3A%201400px)%20%7B%0A%20%20%20%20.row%20.col-xxl-1%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%201%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-xxl-2%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%202%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-xxl-3%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%203%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-xxl-4%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%204%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-xxl-5%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%205%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-xxl-6%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%206%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-xxl-7%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%207%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-xxl-8%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%208%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-xxl-9%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%209%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-xxl-10%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%2010%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-xxl-11%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%2011%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.row%20.col-xxl-12%20%7B%0A%20%20%20%20%20%20grid-area%3A%20auto%2Fauto%2Fauto%2Fspan%2012%3B%0A%20%20%20%20%7D%0A%20%20%7D%0A%3C%2Fstyle%3E%0A" class="vuepress-plugin-demo-block__wrapper" style="display:none;"><div class="vuepress-plugin-demo-block__display"><div class="vuepress-plugin-demo-block__app"></div></div> <div class="vuepress-plugin-demo-block__code"><div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+  <span class="token comment">&lt;!-- &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-3&quot;&gt;col-3&lt;/div&gt;
+        &lt;div class=&quot;col-3&quot;&gt;col-3&lt;/div&gt;
+        &lt;div class=&quot;col-3&quot;&gt;col-3&lt;/div&gt;
+        &lt;div class=&quot;col-3&quot;&gt;col-3&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-sm-3&quot;&gt;col-sm-3&lt;/div&gt;
+        &lt;div class=&quot;col-sm-3&quot;&gt;col-sm-3&lt;/div&gt;
+        &lt;div class=&quot;col-sm-3&quot;&gt;col-sm-3&lt;/div&gt;
+        &lt;div class=&quot;col-sm-3&quot;&gt;col-sm-3&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-3&quot;&gt;col-md-3&lt;/div&gt;
+        &lt;div class=&quot;col-md-3&quot;&gt;col-md-3&lt;/div&gt;
+        &lt;div class=&quot;col-md-3&quot;&gt;col-md-3&lt;/div&gt;
+        &lt;div class=&quot;col-md-3&quot;&gt;col-md-3&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-lg-3&quot;&gt;col-lg-3&lt;/div&gt;
+        &lt;div class=&quot;col-lg-3&quot;&gt;col-lg-3&lt;/div&gt;
+        &lt;div class=&quot;col-lg-3&quot;&gt;col-lg-3&lt;/div&gt;
+        &lt;div class=&quot;col-lg-3&quot;&gt;col-lg-3&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-xl-3&quot;&gt;col-xl-3&lt;/div&gt;
+        &lt;div class=&quot;col-xl-3&quot;&gt;col-xl-3&lt;/div&gt;
+        &lt;div class=&quot;col-xl-3&quot;&gt;col-xl-3&lt;/div&gt;
+        &lt;div class=&quot;col-xl-3&quot;&gt;col-xl-3&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-xxl-3&quot;&gt;col-xxl-3&lt;/div&gt;
+        &lt;div class=&quot;col-xxl-3&quot;&gt;col-xxl-3&lt;/div&gt;
+        &lt;div class=&quot;col-xxl-3&quot;&gt;col-xxl-3&lt;/div&gt;
+        &lt;div class=&quot;col-xxl-3&quot;&gt;col-xxl-3&lt;/div&gt;
+    &lt;/div&gt; --&gt;</span>
+
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>row<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>col-xxl-3 col-lg-4 col-sm-6<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>col<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>col-xxl-3 col-lg-4 col-sm-6<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>col<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>col-xxl-3 col-lg-4 col-sm-6<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>col<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>col-xxl-3 col-lg-4 col-sm-6<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>col<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>col-xxl-3 col-lg-4 col-sm-6<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>col<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>col-xxl-3 col-lg-4 col-sm-6<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>col<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>col-xxl-3 col-lg-4 col-sm-6<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>col<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>col-xxl-3 col-lg-4 col-sm-6<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>col<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>col-xxl-3 col-lg-4 col-sm-6<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>col<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>col-xxl-3 col-lg-4 col-sm-6<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>col<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>col-xxl-3 col-lg-4 col-sm-6<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>col<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>col-xxl-3 col-lg-4 col-sm-6<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>col<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">.row</span> <span class="token punctuation">{</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> skyblue<span class="token punctuation">;</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span>
+    <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> <span class="token function">repeat</span><span class="token punctuation">(</span>12<span class="token punctuation">,</span> 1fr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">grid-template-rows</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+    <span class="token property">grid-auto-rows</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token selector">.row div</span> <span class="token punctuation">{</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> pink<span class="token punctuation">;</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> 1px black solid<span class="token punctuation">;</span>
+    <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 12<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token selector">.row .col-1</span> <span class="token punctuation">{</span>
+    <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 1<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token selector">.row .col-2</span> <span class="token punctuation">{</span>
+    <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 2<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token selector">.row .col-3</span> <span class="token punctuation">{</span>
+    <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 3<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token selector">.row .col-4</span> <span class="token punctuation">{</span>
+    <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 4<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token selector">.row .col-5</span> <span class="token punctuation">{</span>
+    <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 5<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token selector">.row .col-6</span> <span class="token punctuation">{</span>
+    <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 6<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token selector">.row .col-7</span> <span class="token punctuation">{</span>
+    <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 7<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token selector">.row .col-8</span> <span class="token punctuation">{</span>
+    <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 8<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token selector">.row .col-9</span> <span class="token punctuation">{</span>
+    <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 9<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token selector">.row .col-10</span> <span class="token punctuation">{</span>
+    <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 10<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token selector">.row .col-11</span> <span class="token punctuation">{</span>
+    <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 11<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token selector">.row .col-12</span> <span class="token punctuation">{</span>
+    <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 12<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 576px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+    <span class="token selector">.row .col-sm-1</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 1<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-sm-2</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 2<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-sm-3</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 3<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-sm-4</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 4<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-sm-5</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 5<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-sm-6</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 6<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-sm-7</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 7<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-sm-8</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 8<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-sm-9</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 9<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-sm-10</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 10<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-sm-11</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 11<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-sm-12</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 12<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 768px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+    <span class="token selector">.row .col-md-1</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 1<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-md-2</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 2<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-md-3</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 3<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-md-4</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 4<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-md-5</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 5<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-md-6</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 6<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-md-7</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 7<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-md-8</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 8<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-md-9</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 9<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-md-10</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 10<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-md-11</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 11<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-md-12</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 12<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 992px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+    <span class="token selector">.row .col-lg-1</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 1<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-lg-2</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 2<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-lg-3</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 3<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-lg-4</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 4<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-lg-5</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 5<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-lg-6</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 6<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-lg-7</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 7<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-lg-8</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 8<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-lg-9</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 9<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-lg-10</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 10<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-lg-11</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 11<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-lg-12</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 12<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 1200px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+    <span class="token selector">.row .col-xl-1</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 1<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-xl-2</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 2<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-xl-3</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 3<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-xl-4</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 4<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-xl-5</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 5<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-xl-6</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 6<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-xl-7</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 7<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-xl-8</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 8<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-xl-9</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 9<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-xl-10</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 10<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-xl-11</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 11<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-xl-12</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 12<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 1400px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+    <span class="token selector">.row .col-xxl-1</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 1<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-xxl-2</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 2<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-xxl-3</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 3<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-xxl-4</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 4<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-xxl-5</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 5<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-xxl-6</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 6<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-xxl-7</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 7<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-xxl-8</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 8<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-xxl-9</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 9<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-xxl-10</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 10<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-xxl-11</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 11<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.row .col-xxl-12</span> <span class="token punctuation">{</span>
+      <span class="token property">grid-area</span><span class="token punctuation">:</span> auto/auto/auto/span 12<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br><span class="line-number">168</span><br><span class="line-number">169</span><br><span class="line-number">170</span><br><span class="line-number">171</span><br><span class="line-number">172</span><br><span class="line-number">173</span><br><span class="line-number">174</span><br><span class="line-number">175</span><br><span class="line-number">176</span><br><span class="line-number">177</span><br><span class="line-number">178</span><br><span class="line-number">179</span><br><span class="line-number">180</span><br><span class="line-number">181</span><br><span class="line-number">182</span><br><span class="line-number">183</span><br><span class="line-number">184</span><br><span class="line-number">185</span><br><span class="line-number">186</span><br><span class="line-number">187</span><br><span class="line-number">188</span><br><span class="line-number">189</span><br><span class="line-number">190</span><br><span class="line-number">191</span><br><span class="line-number">192</span><br><span class="line-number">193</span><br><span class="line-number">194</span><br><span class="line-number">195</span><br><span class="line-number">196</span><br><span class="line-number">197</span><br><span class="line-number">198</span><br><span class="line-number">199</span><br><span class="line-number">200</span><br><span class="line-number">201</span><br><span class="line-number">202</span><br><span class="line-number">203</span><br><span class="line-number">204</span><br><span class="line-number">205</span><br><span class="line-number">206</span><br><span class="line-number">207</span><br><span class="line-number">208</span><br><span class="line-number">209</span><br><span class="line-number">210</span><br><span class="line-number">211</span><br><span class="line-number">212</span><br><span class="line-number">213</span><br><span class="line-number">214</span><br><span class="line-number">215</span><br><span class="line-number">216</span><br><span class="line-number">217</span><br><span class="line-number">218</span><br><span class="line-number">219</span><br><span class="line-number">220</span><br><span class="line-number">221</span><br><span class="line-number">222</span><br><span class="line-number">223</span><br><span class="line-number">224</span><br><span class="line-number">225</span><br><span class="line-number">226</span><br><span class="line-number">227</span><br><span class="line-number">228</span><br><span class="line-number">229</span><br><span class="line-number">230</span><br><span class="line-number">231</span><br><span class="line-number">232</span><br><span class="line-number">233</span><br><span class="line-number">234</span><br><span class="line-number">235</span><br><span class="line-number">236</span><br><span class="line-number">237</span><br><span class="line-number">238</span><br><span class="line-number">239</span><br><span class="line-number">240</span><br><span class="line-number">241</span><br><span class="line-number">242</span><br><span class="line-number">243</span><br><span class="line-number">244</span><br><span class="line-number">245</span><br><span class="line-number">246</span><br><span class="line-number">247</span><br><span class="line-number">248</span><br><span class="line-number">249</span><br><span class="line-number">250</span><br><span class="line-number">251</span><br><span class="line-number">252</span><br><span class="line-number">253</span><br><span class="line-number">254</span><br><span class="line-number">255</span><br><span class="line-number">256</span><br><span class="line-number">257</span><br><span class="line-number">258</span><br><span class="line-number">259</span><br><span class="line-number">260</span><br><span class="line-number">261</span><br><span class="line-number">262</span><br><span class="line-number">263</span><br><span class="line-number">264</span><br><span class="line-number">265</span><br><span class="line-number">266</span><br><span class="line-number">267</span><br><span class="line-number">268</span><br><span class="line-number">269</span><br><span class="line-number">270</span><br><span class="line-number">271</span><br><span class="line-number">272</span><br><span class="line-number">273</span><br><span class="line-number">274</span><br><span class="line-number">275</span><br><span class="line-number">276</span><br><span class="line-number">277</span><br><span class="line-number">278</span><br><span class="line-number">279</span><br><span class="line-number">280</span><br><span class="line-number">281</span><br><span class="line-number">282</span><br><span class="line-number">283</span><br><span class="line-number">284</span><br><span class="line-number">285</span><br><span class="line-number">286</span><br><span class="line-number">287</span><br><span class="line-number">288</span><br><span class="line-number">289</span><br><span class="line-number">290</span><br><span class="line-number">291</span><br><span class="line-number">292</span><br><span class="line-number">293</span><br><span class="line-number">294</span><br><span class="line-number">295</span><br><span class="line-number">296</span><br><span class="line-number">297</span><br><span class="line-number">298</span><br><span class="line-number">299</span><br><span class="line-number">300</span><br><span class="line-number">301</span><br><span class="line-number">302</span><br><span class="line-number">303</span><br><span class="line-number">304</span><br><span class="line-number">305</span><br><span class="line-number">306</span><br><span class="line-number">307</span><br><span class="line-number">308</span><br><span class="line-number">309</span><br><span class="line-number">310</span><br><span class="line-number">311</span><br><span class="line-number">312</span><br><span class="line-number">313</span><br><span class="line-number">314</span><br><span class="line-number">315</span><br><span class="line-number">316</span><br><span class="line-number">317</span><br><span class="line-number">318</span><br><span class="line-number">319</span><br><span class="line-number">320</span><br><span class="line-number">321</span><br><span class="line-number">322</span><br><span class="line-number">323</span><br><span class="line-number">324</span><br><span class="line-number">325</span><br><span class="line-number">326</span><br><span class="line-number">327</span><br><span class="line-number">328</span><br><span class="line-number">329</span><br><span class="line-number">330</span><br><span class="line-number">331</span><br><span class="line-number">332</span><br><span class="line-number">333</span><br><span class="line-number">334</span><br><span class="line-number">335</span><br><span class="line-number">336</span><br><span class="line-number">337</span><br><span class="line-number">338</span><br><span class="line-number">339</span><br><span class="line-number">340</span><br><span class="line-number">341</span><br><span class="line-number">342</span><br><span class="line-number">343</span><br><span class="line-number">344</span><br><span class="line-number">345</span><br><span class="line-number">346</span><br><span class="line-number">347</span><br><span class="line-number">348</span><br><span class="line-number">349</span><br><span class="line-number">350</span><br><span class="line-number">351</span><br><span class="line-number">352</span><br><span class="line-number">353</span><br><span class="line-number">354</span><br><span class="line-number">355</span><br><span class="line-number">356</span><br><span class="line-number">357</span><br><span class="line-number">358</span><br><span class="line-number">359</span><br><span class="line-number">360</span><br><span class="line-number">361</span><br><span class="line-number">362</span><br><span class="line-number">363</span><br><span class="line-number">364</span><br><span class="line-number">365</span><br><span class="line-number">366</span><br><span class="line-number">367</span><br><span class="line-number">368</span><br><span class="line-number">369</span><br></div></div></div> <div class="vuepress-plugin-demo-block__footer"></div></div> <h3 id="_1-5-响应式交互实现"><a href="#_1-5-响应式交互实现" class="header-anchor">#</a> 1.5 响应式交互实现</h3> <div data-config="" data-type="vanilla" data-code="%3Chtml%3E%0A%3Cbody%3E%0A%20%20%3Clabel%20for%3D%22menu%22%3E%0A%20%20%20%20%3Cspan%3E%0A%20%20%20%20%20%20%E8%8F%9C%E5%8D%95%E6%8C%89%E9%92%AE%0A%20%20%20%20%3C%2Fspan%3E%0A%20%20%3C%2Flabel%3E%0A%20%20%3Cinput%20id%3D%22menu%22%20type%3D%22checkbox%22%3E%0A%20%20%3Cul%3E%0A%20%20%20%20%3Cli%3E%E9%A6%96%E9%A1%B5%3C%2Fli%3E%0A%20%20%20%20%3Cli%3E%E6%95%99%E7%A8%8B%3C%2Fli%3E%0A%20%20%20%20%3Cli%3E%E8%AE%BA%E5%9D%9B%3C%2Fli%3E%0A%20%20%20%20%3Cli%3E%E6%96%87%E7%AB%A0%3C%2Fli%3E%0A%20%20%3C%2Ful%3E%0A%3C%2Fbody%3E%0A%3C%2Fhtml%3E%0A%0A%3Cstyle%3E%0A%20%20ul%20%7B%0A%20%20%20%20display%3A%20none%3B%0A%20%20%7D%0A%0A%20%20input%20%7B%0A%20%20%20%20display%3A%20none%3B%0A%20%20%7D%0A%0A%20%20input%3Achecked%2Bul%20%7B%0A%20%20%20%20display%3A%20block%3B%0A%20%20%7D%0A%0A%20%20%40media%20(min-width%3A%20700px)%20%7B%0A%20%20%20%20ul%20%7B%0A%20%20%20%20%20%20display%3A%20block%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20span%20%7B%0A%20%20%20%20%20%20display%3A%20none%3B%0A%20%20%20%20%7D%0A%20%20%7D%0A%3C%2Fstyle%3E%0A" class="vuepress-plugin-demo-block__wrapper" style="display:none;"><div class="vuepress-plugin-demo-block__display"><div class="vuepress-plugin-demo-block__app"></div></div> <div class="vuepress-plugin-demo-block__code"><div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>menu<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>
+      菜单按钮
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>menu<span class="token punctuation">&quot;</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>checkbox<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>首页<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>教程<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>论坛<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>文章<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">ul</span> <span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token selector">input</span> <span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token selector">input:checked+ul</span> <span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 700px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+    <span class="token selector">ul</span> <span class="token punctuation">{</span>
+      <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">span</span> <span class="token punctuation">{</span>
+      <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br></div></div></div> <div class="vuepress-plugin-demo-block__footer"></div></div> <h3 id="_1-6-响应式布局容器"><a href="#_1-6-响应式布局容器" class="header-anchor">#</a> 1.6 响应式布局容器</h3> <p>响应式需要一个父级做为布局容器，来配合子级元素来实现变化效果。</p> <p>原理就是在不同屏幕下，通过媒体查询来改变这个布局容器的大小，再改变里面子元素的排列方式和大小，从而实现不同屏幕下，看到不同的页面布局和样式变化。</p> <p>父容器版心的尺寸划分</p> <ul><li>超小屏幕（手机，小于 768px）：设置宽度为 100%</li> <li>小屏幕（平板，大于等于 768px）：设置宽度为 750px</li> <li>中等屏幕（桌面显示器，大于等于 992px）：宽度设置为 970px</li> <li>大屏幕（大桌面显示器，大于等于 1200px）：宽度设置为 1170px</li></ul> <p>但是我们也可以根据实际情况自己定义划分</p> <h2 id="_2-0-bootstrap的介绍"><a href="#_2-0-bootstrap的介绍" class="header-anchor">#</a> 2.0 bootstrap的介绍</h2> <h3 id="_2-1bootstrap简介"><a href="#_2-1bootstrap简介" class="header-anchor">#</a> 2.1Bootstrap简介</h3> <p>Bootstrap 来自 Twitter（推特），是目前最受欢迎的前端框架。Bootstrap 是基于HTML、CSS 和 JAVASCRIPT 的，它简洁灵活，使得 Web 开发更加快捷。</p> <ul><li><a href="/my-blog/article/05-mobile/mobile-web/lhttp:/www.bootcss.com/">中文网</a></li> <li><a href="/my-blog/article/05-mobile/mobile-web/lhttp:/getbootstrap.com/">官网</a></li> <li><a href="http://bootstrap.css88.com/" target="_blank" rel="noopener noreferrer">推荐网站<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">getbootstrap<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul> <p>框架：顾名思义就是一套架构，它有一套比较完整的网页功能解决方案，而且控制权在框架本身，有预制样式库、组件和插件。使用者要按照框架所规定的某种规范进行开发。</p> <ul><li><a href="/my-blog/article/05-mobile/source_code/chapter_7/7_7/响应式框架bootstrap.html">响应式框架bootstrap</a></li> <li><a href="/my-blog/article/05-mobile/source_code/chapter_7/7_8/ghost.html">响应式案例：博客</a></li></ul> <h3 id="_2-2-bootstrap优点"><a href="#_2-2-bootstrap优点" class="header-anchor">#</a> 2.2 bootstrap优点</h3> <ul><li>标准化的html+css编码规范</li> <li>提供了一套简洁、直观、强悍的组件</li> <li>有自己的生态圈，不断的更新迭代</li> <li>让开发更简单，提高了开发的效率</li></ul> <h3 id="_2-3-版本简介"><a href="#_2-3-版本简介" class="header-anchor">#</a> 2.3 版本简介</h3> <p>2.x.x：停止维护,兼容性好,代码不够简洁，功能不够完善。</p> <p>3.x.x：目前使用最多,稳定,但是放弃了IE6-IE7。对 IE8 支持但是界面效果不好,偏向用于开发响应式布局、移动设备优先的WEB 项目。</p> <p>4.x.x：最新版，目前还不是很流行</p> <h3 id="_2-4bootstrap基本使用"><a href="#_2-4bootstrap基本使用" class="header-anchor">#</a> 2.4bootstrap基本使用</h3> <p>在现阶段我们还没有接触JS相关课程，所以我们只考虑使用它的样式库。</p> <p>Bootstrap 使用四步曲：</p> <ol><li>创建文件夹结构</li></ol> <p><img src="/my-blog/assets/img/1.6d576fa3.png" alt="">
+​</p> <ol start="2"><li>创建 html 骨架结构</li></ol> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>zh-CN<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>utf-8<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>X-UA-Compatible<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>IE=edge<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>viewport<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>width=device-width, initial-scale=1<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Bootstrap 101 Template<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token comment">&lt;!-- Bootstrap --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>css/bootstrap.min.css<span class="token punctuation">&quot;</span></span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>stylesheet<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token comment">&lt;!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --&gt;</span>
+    <span class="token comment">&lt;!-- WARNING: Respond.js doesn't work if you view the page via file:// --&gt;</span>
+    <span class="token comment">&lt;!--[if lt IE 9]&gt;
+      &lt;script src=&quot;//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js&quot;&gt;&lt;/script&gt;
+      &lt;script src=&quot;//cdn.bootcss.com/respond.js/1.4.2/respond.min.js&quot;&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>你好，世界！<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token comment">&lt;!-- jQuery (necessary for Bootstrap's JavaScript plugins) --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>//cdn.bootcss.com/jquery/1.11.3/jquery.min.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!-- Include all compiled plugins (below), or include individual files as needed --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>js/bootstrap.min.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br></div></div><ol start="3"><li>引入相关样式文件</li></ol> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token comment">&lt;!-- Bootstrap 核心样式--&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>stylesheet<span class="token punctuation">&quot;</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>bootstrap/css/bootstrap.min.css<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><ol start="4"><li>书写内容</li></ol> <p>直接拿Bootstrap 预先定义好的样式来使用</p> <p>修改Bootstrap 原来的样式，注意权重问题</p> <p>学好Bootstrap 的关键在于知道它定义了哪些样式，以及这些样式能实现什么样的效果</p> <h3 id="_2-5-bootstrap布局容器"><a href="#_2-5-bootstrap布局容器" class="header-anchor">#</a> 2.5 bootstrap布局容器</h3> <p>Bootstrap 需要为页面内容和栅格系统包裹一个 .container 或者.container-fluid 容器，它提供了两个作此用处的类。</p> <p>.container</p> <ul><li>响应式布局的容器  固定宽度</li> <li>大屏 ( &gt;=1200px)  宽度定为 1170px</li> <li>中屏 ( &gt;=992px)   宽度定为  970px</li> <li>小屏 ( &gt;=768px)   宽度定为  750px</li> <li>超小屏  (100%)</li></ul> <p>.container-fluid</p> <ul><li>流式布局容器 百分百宽度</li> <li>占据全部视口（viewport）的容器。</li></ul> <h3 id="_2-6-bootstrap栅格系统"><a href="#_2-6-bootstrap栅格系统" class="header-anchor">#</a> 2.6 bootstrap栅格系统</h3> <p>Bootstrap提供了一套响应式、移动设备优先的流式栅格系统，随着屏幕或视口（viewport）尺寸的增加，系统会自动分为最多12列。</p> <p>栅格系统用于通过一系列的行（row）与列（column）的组合来创建页面布局，你的内容就可以放入这些创建好的布局中。</p> <ul><li>按照不同屏幕划分为1~12 等份</li> <li>行（row） 可以去除父容器作用15px的边距</li> <li>xs-extra small：超小； sm-small：小；  md-medium：中等； lg-large：大；</li> <li>列（column）大于 12，多余的“列（column）”所在的元素将被作为一个整体另起一行排列</li> <li>每一列默认有左右15像素的 padding</li> <li>可以同时为一列指定多个设备的类名，以便划分不同份数  例如 class=&quot;col-md-4 col-sm-6&quot;</li></ul> <p>栅格嵌套</p> <p>栅格系统内置的栅格系统将内容再次嵌套。简单理解就是一个列内再分成若干份小列。我们可以通过添加一个新的 .row 元素和一系列 .col-sm-* 元素到已经存在的 .col-sm-*
+元素内。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;!-- 列嵌套 --&gt;
+ &lt;div class=&quot;col-sm-4&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+         &lt;div class=&quot;col-sm-6&quot;&gt;小列&lt;/div&gt;
+         &lt;div class=&quot;col-sm-6&quot;&gt;小列&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>列偏移</p> <p>使用 .col-md-offset-* 类可以将列向右侧偏移。这些类实际是通过使用 * 选择器为当前元素增加了左侧的边距（margin）。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code> &lt;!-- 列偏移 --&gt;
+  &lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;col-lg-4&quot;&gt;1&lt;/div&gt;
+      &lt;div class=&quot;col-lg-4 col-lg-offset-4&quot;&gt;2&lt;/div&gt;
+  &lt;/div&gt;
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>列排序</p> <p>通过使用 .col-md-push-* 和 .col-md-pull-* 类就可以很容易的改变列（column）的顺序。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code> &lt;!-- 列排序 --&gt;
+  &lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;col-lg-4 col-lg-push-8&quot;&gt;左侧&lt;/div&gt;
+      &lt;div class=&quot;col-lg-8 col-lg-pull-4&quot;&gt;右侧&lt;/div&gt;
+  &lt;/div&gt;
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>响应式工具</p> <p>为了加快对移动设备友好的页面开发工作，利用媒体查询功能，并使用这些工具类可以方便的针对不同设备展示或隐藏页面内容。</p> <p><img src="/my-blog/assets/img/2_2.33d2cdc6.jpg" alt=""></p> <h2 id="_3-0-阿里百秀案例制作"><a href="#_3-0-阿里百秀案例制作" class="header-anchor">#</a> 3.0 阿里百秀案例制作</h2> <h3 id="_3-1-技术选型"><a href="#_3-1-技术选型" class="header-anchor">#</a> 3.1 技术选型</h3> <p>方案：我们采取响应式页面开发方案</p> <p>技术：bootstrap框架</p> <p>设计图： 本设计图采用 1280px 设计尺寸</p> <p>项目结构搭建</p> <p>Bootstrap 使用四步曲：</p> <ol><li><p>创建文件夹结构</p></li> <li><p>创建 html 骨架结构</p></li> <li><p>引入相关样式文件</p></li> <li><p>书写内容</p></li></ol> <p>container宽度修改</p> <p>因为本效果图采取 1280的宽度， 而Bootstrap 里面 container宽度 最大为 1170px，因此我们需要手动改下container宽度</p> <div class="language- line-numbers-mode"><pre class="language-text"><code> /* 利用媒体查询修改 container宽度适合效果图宽度  */
+  @media (min-width: 1280px) { 
+    .container { 
+	width: 1280px; 
+     } 
+   }
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://gitee.com/qarabala/my-blog/edit/master/docs/article/05-mobile/mobile-web/移动web开发之响应式布局.md" target="_blank" rel="noopener noreferrer">在 Gitee 上编辑此页</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">最近更新时间:</span> <span class="time">3/16/2022, 12:14:32 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/my-blog/article/05-mobile/mobile-web/移动web开发_vw布局.html" class="prev">
+        移动web开发vw布局
+      </a></span> <span class="next"><a href="/my-blog/article/05-mobile/grid/网格布局.html">
+        网格布局
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/my-blog/assets/js/app.7c428a71.js" defer></script><script src="/my-blog/assets/js/3.bb9bf636.js" defer></script><script src="/my-blog/assets/js/91.d778883e.js" defer></script>
+  </body>
+</html>
